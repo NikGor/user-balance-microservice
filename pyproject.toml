@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "user-balance-microservice"
+version = "0.1.0"
+description = "User Balance Microservice: A Python microservice for managing user balances, transactions, and financial operations."
+authors = ["Nikolaj Gordienko <nicolas.gordienko@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    {include = "UserBalanceMicroservice"},
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^5.0.1"
+python-dotenv = "^1.0.0"
+psycopg2-binary = "^2.9.9"
+dj-database-url = "^2.1.0"
+faker = "^22.4.0"
+
+[tool.poetry.group.dev.dependencies]
+django-test = "^0.4030"
+flake8 = "^7.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
