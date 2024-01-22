@@ -22,6 +22,15 @@ jobs:
         run: |
           pip install poetry
           make install
+      - name: Set up environment variables
+        env:
+          SECRET_KEY: secret-key
+          POSTGRES_USER: user
+          POSTGRES_PASSWORD: password
+          POSTGRES_DB: postgres_db
+        run: |
+          echo "SECRET_KEY=$SECRET_KEY" >> $GITHUB_ENV
+          echo "DATABASE_URL=postgres://$POSTGRES_USER:$POSTGRES_PASSWORD@localhost/$POSTGRES_DB" >> $GITHUB_ENV
       - name: Run linter and pytest
         run: |
           make check

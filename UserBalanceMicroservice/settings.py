@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'UserBalanceMicroservice.reporting',
     'UserBalanceMicroservice.services',
     'UserBalanceMicroservice.orders',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
